@@ -9,6 +9,7 @@ def client():
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
     s.connect((host,port))
     s.send(nick.encode("ascii"))
+    # stdscr.addstr(f"Rooms available are {','.join(self.rooms_name)}")
     while True:
         msg = input(f">")
         s.sendall(msg.encode("ascii"))
